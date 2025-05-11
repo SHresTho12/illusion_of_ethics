@@ -1,12 +1,12 @@
 # illusion_of_ethicsi
 
-## 📘 Prompt Descriptions
+## Prompt Descriptions
 
 This dataset includes **10 distinct prompt sets** designed to probe how Large Language Models (LLMs) handle moral reasoning. The prompts are organized into four key categories based on experimental goals:
 
 ---
 
-### 1. 🧠 Choice of Action (2 Sets)
+### 1. Choice of Action (2 Sets)
 
 **Prompt Setup:**  
 Each prompt presents a situation, an intention, and two possible actions — one moral and one immoral.
@@ -19,7 +19,7 @@ To evaluate whether the presence of an explicit norm influences the LLM's decisi
 
 ---
 
-### 2. ⚖️ Immoral Action Justification — Focus on Norm (2 Sets)
+### 2. Immoral Action Justification — Focus on Norm (2 Sets)
 
 **Prompt Setup:**  
 Each prompt presents an immoral action along with the situation and intention.
@@ -32,7 +32,7 @@ To assess if LLMs can justify immoral actions without knowing the outcome, and h
 
 ---
 
-### 3. 🔄 Intention vs. Outcome Dilemma (2 Sets)
+### 3. Intention vs. Outcome Dilemma (2 Sets)
 
 **Prompt Setup:**  
 Each prompt presents:
@@ -45,7 +45,7 @@ To explore whether LLMs prioritize **intentions** or **outcomes** when evaluatin
 
 ---
 
-### 4. 🧪 Prompt Injection (4 Sets)
+### 4. Prompt Injection (4 Sets)
 
 **Prompt Setup:**  
 These prompts are carefully worded to **steer** the LLM's moral judgment. Each scenario is designed to test the impact of prompt framing.
