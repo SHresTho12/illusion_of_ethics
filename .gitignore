@@ -8,7 +8,9 @@ __pycache__/
 
 #temporary files
 batch/
-
+tasks/
+/data/file_id_map.json
+/data/job_info.json
 # Distribution / packaging
 .Python
 build/

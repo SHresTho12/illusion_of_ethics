@@ -37,7 +37,7 @@ def create_batch_jsonl(original_file):
             outfile.write(json.dumps(new_obj) + '\n')
 
     print(f"Batch file created: {new_file}")
-    return new_file, question_text
+    return new_file, {"question": question_text, "file": filename}
 
 
 
