@@ -1,4 +1,24 @@
-# illusion_of_ethicsi
+# illusion_of_ethics
+
+## 📁 Repository Structure
+
+This project explores how large language models (LLMs) evaluate moral and immoral actions under varying contexts such as social norms, intentions, and outcomes. Below is the structure of the repository and description of each component:
+
+├── code
+│ └── Contains the Jupyter notebook with the experimental setup and evaluation logic.
+│
+├── data
+│ └── prompts
+│ ├── Folder containing all prompt generation files in JSONL format.
+│
+├── docs
+│ └── Folder for documentation, analysis reports, and other references.
+│
+├── README.md
+│ └── Main documentation file containing an overview of the project.
+│
+└── result
+└── Folder where evaluation outputs, plots, or model results are stored.
 
 ## Prompt Descriptions
 
