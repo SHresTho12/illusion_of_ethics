@@ -20,8 +20,8 @@ PROMPT_FILES = {
     "immoral_without_norm": rel_path("data", "prompts", "immoral_act_without_norm_prompts.jsonl"),
 
     # Intention vs. Outcome
-    "moral_action_immoral_outcome": rel_path("data", "prompts", "with_moralAction_immoralConsequnece_prompts.jsonl"),
-    "immoral_action_moral_outcome": rel_path("data", "prompts", "with_immoralAction_moralConsequnece_prompts.jsonl"),
+    "moral_action_immoral_outcome": rel_path("data", "prompts", "with_moralAction_immoralConsequnece_base_prompts.jsonl"),
+    "immoral_action_moral_outcome": rel_path("data", "prompts", "with_immoralAction_moralConsequnece_base_prompts.jsonl"),
 
     # Prompt Injection (4 sets)
     "injection_moral_action_immoral_outcome": rel_path("data", "prompts", "injection_moralAction_immoralOutcome_prompts.jsonl"),
