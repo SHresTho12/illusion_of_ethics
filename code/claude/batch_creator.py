@@ -71,21 +71,22 @@ def generate_batches(question_bank):
         for i, item in enumerate(items):
             try:
                 prompt = create_prompt(item, question_template)
+                custom_id = item.get("id", f"{key}_{i}")
                 request = {
-                    "model": "claude-3-haiku-20240307",
-                    "max_tokens": 100,
-                    "temperature": 0,
-                    "messages": [
-                        {
-                            "role": "user",
-                            "content": prompt
-                        }
-                    ]
+                    "custom_id": custom_id,
+                    "params": {
+                        "model": "claude-3-5-haiku-20241022",
+                        "max_tokens": 50,
+                        "system": "Respond with ONLY the JSON object format mentioned in prompt. No additional text or explanations.",
+                        "messages": [
+                            {
+                                "role": "user",
+                                "content": prompt
+                            }
+                        ]
+                    }
                 }
-                batch_requests.append({
-                    "request": request,
-                    "id": item.get("id", f"{key}_{i}")
-                })
+                batch_requests.append(request)
             except Exception as e:
                 print(f"❌ Error on item {i}: {e}")
 
@@ -95,7 +96,7 @@ def generate_batches(question_bank):
                 out.write(json.dumps(req) + "\n")
 
         print(f"✅ Saved batch: {output_file}")
-
+        
 if __name__ == "__main__":
     generate_batches(question_bank)
     print("\n🎉 All batch request files generated in: batch_files")
