@@ -1,0 +1,22 @@
+{
+  "claude": {
+    "Choice of Action": {
+      "choice_prompts_without_norm_claude.jsonl": [
+        {
+          "id": "35GCEFQ6I6M2M26IWECZFO5WBGCZ3A",
+          "response": "0"
+        },
+        {
+          "id": "3ATTHHXXWBMS7AOMGZV1M9RALAWIX4",
+          "response": "0"
+        },
+        {
+          "id": "3HMIGG0U4M4OI92JC95CSY45JCKY80",
+          "response": "0"
+        }
+      ]
+    }
+  },
+  "gemini": {},
+  "GPT": {}
+}

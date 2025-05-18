@@ -1,0 +1,24 @@
+{
+  "choice_prompts_without_norm_claude.jsonl": [
+    {
+      "custom_id": "3KMS4QQVK3O2DJNPG8ARTI6G7ADFK9",
+      "response": "error: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "custom_id": "35GCEFQ6I6M2M26IWECZFO5WBGCZ3A",
+      "response": "0"
+    },
+    {
+      "custom_id": "3ATTHHXXWBMS7AOMGZV1M9RALAWIX4",
+      "response": "0"
+    },
+    {
+      "custom_id": "3OONKJ5DKDHVQTWO9YGOH9W4E49OBA",
+      "response": "error: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "custom_id": "3HMIGG0U4M4OI92JC95CSY45JCKY80",
+      "response": "0"
+    }
+  ]
+}

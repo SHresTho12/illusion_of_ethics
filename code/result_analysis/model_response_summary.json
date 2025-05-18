@@ -1,0 +1,186 @@
+{
+  "claude": {
+    "Prompt Injection": {
+      "prompt_injection_immoral_act_action_weighted_claude_results.jsonl": {
+        "moral": 9883,
+        "immoral": 2084,
+        "hallucinated": 0
+      },
+      "prompt_injection_immoral_action_outcome_weighted_claude.jsonl": {
+        "moral": 2534,
+        "immoral": 9466,
+        "hallucinated": 0
+      },
+      "Prompt_injection_moral_action_outcome_weighted_claude.jsonl": {
+        "moral": 9802,
+        "immoral": 2198,
+        "hallucinated": 0
+      },
+      "prompt_injection_moral_action_action_weighted_claude.jsonl": {
+        "moral": 9495,
+        "immoral": 2505,
+        "hallucinated": 0
+      }
+    },
+    "Choice of Action": {
+      "choice_prompt_with_norm_claude.jsonl": {
+        "moral": 11825,
+        "immoral": 175,
+        "hallucinated": 0
+      },
+      "choice_prompts_without_norm_claude.jsonl": {
+        "moral": 11418,
+        "immoral": 577,
+        "hallucinated": 3
+      }
+    },
+    "Base Case": {
+      "with_immoralAction_moralConsequence_base_claude.jsonl": {
+        "moral": 1424,
+        "immoral": 10576,
+        "hallucinated": 0
+      },
+      "with_moralAction_immoralConsequnece_base_claude.jsonl": {
+        "moral": 6782,
+        "immoral": 5218,
+        "hallucinated": 0
+      }
+    }
+  },
+  "gemini": {
+    "Base Case": {
+      "_result_with_immoralAction_moralConsequnece_base_prompts.jsonl": {
+        "moral": 2947,
+        "immoral": 9053,
+        "hallucinated": 0
+      },
+      "_result_with_moralAction_immoralConsequnece_base_prompts.jsonl": {
+        "moral": 6796,
+        "immoral": 5204,
+        "hallucinated": 0
+      }
+    },
+    "Prompt Injection": {
+      "_result_prompt_injection_immoral_act_action_weighted.jsonl": {
+        "moral": 10118,
+        "immoral": 1882,
+        "hallucinated": 0
+      },
+      "_result_prompt_injection_immoral_action_outcome_weighted.jsonl": {
+        "moral": 4898,
+        "immoral": 7102,
+        "hallucinated": 0
+      },
+      "_result_prompt_injection_moral_action_action_weighted.jsonl": {
+        "moral": 7102,
+        "immoral": 4898,
+        "hallucinated": 0
+      },
+      "_result_Prompt_injection_moral_action_outcome_weighted.jsonl": {
+        "moral": 11652,
+        "immoral": 348,
+        "hallucinated": 0
+      }
+    },
+    "Choice of Action": {
+      "_result_choice_prompts_with_norm.jsonl": {
+        "moral": 11840,
+        "immoral": 160,
+        "hallucinated": 0
+      },
+      "_result_choice_prompts_without_norm.jsonl": {
+        "moral": 11179,
+        "immoral": 821,
+        "hallucinated": 0
+      }
+    }
+  },
+  "GPT": {
+    "Choice of Action": {
+      "choice_with_norm.jsonl": {
+        "moral": 11813,
+        "immoral": 187,
+        "hallucinated": 0
+      },
+      "choice_without_norm.jsonl": {
+        "moral": 11378,
+        "immoral": 622,
+        "hallucinated": 0
+      },
+      "Choice_without_norm_4.1.jsonl": {
+        "moral": 11425,
+        "immoral": 575,
+        "hallucinated": 0
+      },
+      "choice_with_norm_4.1.jsonl": {
+        "moral": 11873,
+        "immoral": 127,
+        "hallucinated": 0
+      }
+    },
+    "Prompt Injection": {
+      "Prompt_injection_moral_action_outcome_weighted.jsonl": {
+        "moral": 11679,
+        "immoral": 321,
+        "hallucinated": 0
+      },
+      "prompt_injection_immoral_act_action_weighted.jsonl": {
+        "moral": 9925,
+        "immoral": 2075,
+        "hallucinated": 0
+      },
+      "prompt_injection_immoral_action_outcome_weighted.jsonl": {
+        "moral": 10015,
+        "immoral": 1985,
+        "hallucinated": 0
+      },
+      "prompt_injection_moral_action_action_weighted.jsonl": {
+        "moral": 9109,
+        "immoral": 2891,
+        "hallucinated": 0
+      },
+      "prompt_injection_immoral_act_action_weighted_4.1.jsonl": {
+        "moral": 7385,
+        "immoral": 4615,
+        "hallucinated": 0
+      },
+      "Prompt_injection_moral_action_outcome_weighted_4.1.jsonl": {
+        "moral": 11434,
+        "immoral": 566,
+        "hallucinated": 0
+      },
+      "prompt_injection_immoral_action_outcome_weighted_4.1.jsonl": {
+        "moral": 5412,
+        "immoral": 6588,
+        "hallucinated": 0
+      },
+      "prompt_injection_moralAction_immoralOutcome_prompts_tasks_4.1.jsonl": {
+        "moral": 10126,
+        "immoral": 1874,
+        "hallucinated": 0
+      }
+    },
+    "Base Case": {
+      "with_immoralAction_moralConsequence_base.jsonl": {
+        "moral": 3738,
+        "immoral": 8262,
+        "hallucinated": 0
+      },
+      "with_moralAction_immoralConsequence_base.jsonl": {
+        "moral": 5963,
+        "immoral": 6037,
+        "hallucinated": 0
+      },
+      "with_immoralAction_moralConsequence_base_4.1_output.jsonl": {
+        "moral": 3114,
+        "immoral": 8886,
+        "hallucinated": 0
+      },
+      "with_moralAction_immoralConsequence_4.1_base_output.jsonl": {
+        "moral": 9673,
+        "immoral": 2327,
+        "hallucinated": 0
+      }
+    }
+  }
+}
