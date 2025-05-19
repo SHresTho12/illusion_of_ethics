@@ -41,20 +41,7 @@ To evaluate whether the presence of an explicit norm influences the LLM's decisi
 
 ---
 
-### 2. Immoral Action Justification — Focus on Norm (2 Sets)
-
-**Prompt Setup:**  
-Each prompt presents an immoral action along with the situation and intention.
-
-- **With Norm:** Norm is explicitly stated.
-- **Without Norm:** No norm is included.
-
-**Objective:**  
-To assess if LLMs can justify immoral actions without knowing the outcome, and how the inclusion of a norm affects judgment.
-
----
-
-### 3. Intention vs. Outcome Dilemma (2 Sets)
+### 2. Intention vs. Outcome Dilemma (2 Sets)
 
 **Prompt Setup:**  
 Each prompt presents:
@@ -67,7 +54,7 @@ To explore whether LLMs prioritize **intentions** or **outcomes** when evaluatin
 
 ---
 
-### 4. Prompt Injection (4 Sets)
+### 3. Prompt Injection (4 Sets)
 
 **Prompt Setup:**  
 These prompts are carefully worded to **steer** the LLM's moral judgment. Each scenario is designed to test the impact of prompt framing.
