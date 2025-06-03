@@ -1,4 +1,4 @@
-# illusion_of_ethics
+# Illusion_of_Ethics
 
 ## 📁 Repository Structure
 
