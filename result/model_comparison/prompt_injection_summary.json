@@ -1,0 +1,15 @@
+{
+  "total_entries_per_model": {
+    "claude": 0,
+    "gemini": 0,
+    "gpt-4.1-mini": 0,
+    "gpt-4-mini": 0
+  },
+  "matching_counts": {
+    "claude_vs_gpt-4.1-mini": 0,
+    "claude_vs_gpt-4-mini": 0,
+    "gpt-4.1-mini_vs_gemini": 0,
+    "gpt-4-mini_vs_gemini": 0,
+    "gemini_vs_claude": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "category": "without_norm",
+  "total_entries_per_model": {
+    "claude": 11998,
+    "gemini": 12000,
+    "gpt-4.1-mini": 12000,
+    "gpt-4-mini": 12000
+  },
+  "matching_counts": {
+    "claude_vs_gpt-4.1-mini": 11425,
+    "claude_vs_gpt-4-mini": 11426,
+    "gpt-4.1-mini_vs_gemini": 11292,
+    "gpt-4-mini_vs_gemini": 11325,
+    "gemini_vs_claude": 11235
+  }
+}
