@@ -1,0 +1,17 @@
+{
+  "category": "immoral_action_moral_consequence",
+  "total_entries_per_model": {
+    "claude": 12000,
+    "gemini": 12000,
+    "gpt-4.1-mini": 12000,
+    "gpt-4-mini": 12000
+  },
+  "common_ids_count": 12000,
+  "all_chose_0_count": 1083,
+  "all_chose_1_count": 7102,
+  "agreement_rate": {
+    "chose_0_percentage": 9.025,
+    "chose_1_percentage": 59.18333333333333,
+    "total_agreement_percentage": 68.20833333333334
+  }
+}

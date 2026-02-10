@@ -1,0 +1,17 @@
+{
+  "category": "action_weighted",
+  "total_entries_per_model": {
+    "claude": 12000,
+    "gemini": 12000,
+    "gpt-4.1-mini": 12000,
+    "gpt-4-mini": 12000
+  },
+  "common_ids_count": 12000,
+  "all_chose_0_count": 5814,
+  "all_chose_1_count": 663,
+  "agreement_rate": {
+    "chose_0_percentage": 48.449999999999996,
+    "chose_1_percentage": 5.525,
+    "total_agreement_percentage": 53.974999999999994
+  }
+}
