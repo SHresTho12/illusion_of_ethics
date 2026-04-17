@@ -9,8 +9,8 @@ from tqdm import tqdm
 import re
 
 # Configuration
-DATASETS_DIR = Path("data/prompts")
-RESULTS_BASE_DIR = Path("results/open_source")
+DATASETS_DIR = Path("../../data/prompts")
+RESULTS_BASE_DIR = Path("../../results/open_source")
 MODELS_DIR = Path("Models")
 
 # Prompt type to file mapping
@@ -30,40 +30,45 @@ PROMPT_FILES = {
 
 class ModelRunner:
     def __init__(self, model_name, device="auto", max_new_tokens=50):
-        """
-        Initialize the model runner
-        
-        Args:
-            model_name: HuggingFace model name or path
-            device: Device to run on ('auto', 'cuda', 'cpu')
-            max_new_tokens: Maximum tokens to generate
-        """
-        self.model_name = model_name
+        self.original_model_name = model_name
         self.max_new_tokens = max_new_tokens
-        
-        logging.info(f"Loading model: {model_name}")
-        
+
+        # Resolve local path
+        self.model_path = MODELS_DIR / model_name.replace("/", "_")
+
+        if self.model_path.exists():
+            logging.info(f"Loading model from local path: {self.model_path}")
+            load_path = str(self.model_path)
+        else:
+            logging.info(f"Model not found locally. Downloading: {model_name}")
+            load_path = model_name  # download from HF
+
         # Load tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(
-            model_name,
+            load_path,
             trust_remote_code=True,
             padding_side='left'
         )
-        
-        # Set pad token if not set
+
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
-        
+
         # Load model
         self.model = AutoModelForCausalLM.from_pretrained(
-            model_name,
+            load_path,
             torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
             device_map=device,
             trust_remote_code=True
         )
-        
+
+        # If downloaded, save locally
+        if not self.model_path.exists():
+            logging.info(f"Saving model locally to {self.model_path}")
+            self.model.save_pretrained(self.model_path)
+            self.tokenizer.save_pretrained(self.model_path)
+
         self.model.eval()
-        logging.info(f"Model loaded successfully on {self.model.device}")
+        logging.info(f"Model ready on {self.model.device}")
     
     def generate_response(self, prompt):
         """
@@ -167,21 +172,17 @@ def read_prompts(prompt_file):
                 prompts.append(json.loads(line))
     return prompts
 
-
-def save_result(output_file, custom_id, response_value):
-    """
-    Save a single result to output file
-    
-    Args:
-        output_file: Path to output file
-        custom_id: Custom ID for the prompt
-        response_value: Response value (0, 1, or 2)
-    """
+def save_result(output_file, custom_id, prompt_text, response_value, raw_response=None):
     result = {
         "id": custom_id,
+        "prompt": prompt_text,
         "result": response_value
     }
-    
+
+    # Optional but VERY useful for debugging
+    if raw_response is not None:
+        result["raw_response"] = raw_response
+
     with open(output_file, 'a') as f:
         f.write(json.dumps(result) + '\n')
 
@@ -251,7 +252,12 @@ def process_dataset(model_runner, prompt_type, output_dir, resume=True):
                 response_value = "None"
             
             # Save result immediately
-            save_result(output_file, custom_id, response_value)
+            save_result(
+                output_file,
+                custom_id,
+                prompt_text,
+                response_value,
+                raw_response)
             processed_ids.add(custom_id)
             
         except Exception as e:
